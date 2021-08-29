@@ -8,7 +8,9 @@
 }
 
 body{
-    background: lightgreen;
+    marign: 0;
+    padding: 0;
+    height:100vh;
 }
 
 ::selection{
@@ -415,4 +417,9 @@ footer button.show{
         font-weight: bold;
         border: 2px solid red;
         border-radius: 6px;
+}
+/*using particle*/
+#particles-js{
+    height: 100%;
+    background: linear-gradient(to right, rgb(0, 42, 255), rgb(0, 255, 238));;
 }
