@@ -216,7 +216,7 @@ section .option_list .option:hover{
 }
 
 section .option_list .option.correct{
-    /* color: #155724; */
+    color: #155724;
     background: #d4edda;
     border: 1px solid #c3e6cb;
 }
@@ -242,11 +242,11 @@ section .option_list .option .icon{
     transition: all 0.3s ease;
     line-height: 24px;
 }
-/* .option_list .option .icon.tick{
+.option_list .option .icon.tick{
     color: #23903c;
     border-color: #23903c;
     background: #d4edda;
-} */
+}
 
 /* .option_list .option .icon.cross{
     color: #a42834;
