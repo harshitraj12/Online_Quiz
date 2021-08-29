@@ -9,38 +9,25 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-const names=document.getElementById('name');
-const email=document.getElementById('email');
+let names=document.getElementById('name');
+let email=document.getElementById('email');
 let contribute = document.getElementById('footer');
+let details_box = document.querySelector('.details');
 
 contribute.style.display='none';
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
-    questions.sort(() => Math.random() - 0.5)
-    questions = questions.slice(0, 5)
-    info_box.classList.add("activeInfo"); //show info box
-}
-
-// if exitQuiz button clicked
-exit_btn.onclick = ()=>{
-    info_box.classList.remove("activeInfo"); //hide info box
-}
-    
-// if continueQuiz button clicked
-continue_btn.onclick = ()=>{
     let user_name=names.value;
     let user_email=email.value; 
     if (user_name !=""  && user_email!="")
     {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(user_email))
         {
-            info_box.classList.remove("activeInfo"); //hide info box
-            quiz_box.classList.add("activeQuiz"); //show quiz box
-            showQuetions(0); //calling showQestions function
-            queCounter(1); //passing 1 parameter to queCounter
-            startTimer(15); //calling startTimer function
-            startTimerLine(0); //calling startTimerLine function
+            questions.sort(() => Math.random() - 0.5)
+            questions = questions.slice(0, 5)
+            info_box.classList.add("activeInfo"); //show info box
+            details_box.style.display='none';
         }
         else
         {
@@ -51,18 +38,38 @@ continue_btn.onclick = ()=>{
     else if(user_name ==""  && user_email=="")
     {
         info_box.style.display='block';
-        alert("You have not provided both Name and Email ID");
+        alert("Please Enter Your Name and Email ID");
     }
     else if(user_name=="")
     {
         info_box.style.display='block';
-        alert("You have not Provided Name")
+        alert("Please Enter Your Name")
     }
     else if(user_email=="")
     {
         info_box.style.display='block';
-        alert("You have not Provided Email")
-    }
+        alert("Please Enter Your Email ID")
+    }    
+}
+
+// if exitQuiz button clicked
+exit_btn.onclick = ()=>{
+    info_box.classList.remove("activeInfo"); //hide info box
+    details_box.style.display='block';
+    names.value="";
+    email.value="";
+}
+    
+// if continueQuiz button clicked
+continue_btn.onclick = ()=>
+{
+    info_box.classList.remove("activeInfo"); //hide info box
+    quiz_box.classList.add("activeQuiz"); //show quiz box
+    showQuetions(0); //calling showQestions function
+    queCounter(1); //passing 1 parameter to queCounter
+    startTimer(15); //calling startTimer function
+    startTimerLine(0); //calling startTimerLine function
+    
 }
 
 let timeValue =  15;
