@@ -69,7 +69,7 @@ continue_btn.onclick = ()=>
     queCounter(1); //passing 1 parameter to queCounter
     startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
-    
+
 }
 
 let timeValue =  15;
@@ -219,7 +219,7 @@ function showResult(){
             message =>{
                 //console.log (message);
                 if(message=='OK'){
-                alert('Your mail has been send. Thank you for giving Test.');
+                alert("Your Result's Status has been sent on your Mail ID. Thank you for giving Test.");
                 }
                 else{
                     console.error (message);

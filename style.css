@@ -78,10 +78,11 @@ input
     height: 380px;
     background: lightcyan;
     border-radius: 5px;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.95);
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .info_box{
@@ -112,7 +113,6 @@ input
     margin: 3px;
     height: 60px;
     width: 100%;
-    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
