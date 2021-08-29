@@ -5,10 +5,10 @@ let questions = [
     question: "What does HTML stand for?",
     answer: "Hyper Text Markup Language",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "Hyper Text Modern Language",
+      "Hyper Tool Markup Language",
+      "Hyper Test Multiple Language",
+      "Hyper Text Markup Language"
     ]
   },
     {
@@ -16,21 +16,21 @@ let questions = [
     question: "What does CSS stand for?",
     answer: "Cascading Style Sheet",
     options: [
-      "Common Style Sheet",
+      "Cascading Style Size",
       "Colorful Style Sheet",
-      "Computer Style Sheet",
+      "Common Sheet Style",
       "Cascading Style Sheet"
     ]
   },
     {
     numb: "Q",
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Which of the following is Web Browser?",
+    answer: "Google",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "Facebook",
+      "Google",
+      "Whatsapp",
+      "Slack"
     ]
   },
     {
@@ -38,25 +38,24 @@ let questions = [
     question: "What does SQL stand for?",
     answer: "Structured Query Language",
     options: [
-      "Stylish Question Language",
+      "Stylish Query Language",
       "Stylesheet Query Language",
-      "Statement Question Language",
+      "Structured Question Language",
       "Structured Query Language"
     ]
   },
     {
     numb: "Q",
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "Which is Version Control Software?",
+    answer: "Git",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "Git",
+      "AWS",
+      "Container",
+      "JavaScript"
     ]
   },
-  // you can uncomment the below codes and make duplicate as more as you want to add question
-  // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
+ 
   {
     numb: "Q",
     question: "What does AWS stand for?",
@@ -70,13 +69,13 @@ let questions = [
   },
     {
       numb: "Q",
-      question: "Which topic is not a part of walkover training?",
-      answer: "Python",
+      question: "Which is Cloud Providing Platform?",
+      answer: "AWS",
       options: [
-        "Git",
-        "AWS",
-        "Python",
-        "SQL"
+        "Docker",
+        "Kubernetes",
+        "GSP",
+        "AWS"
       ]
     },
     {
@@ -103,13 +102,13 @@ let questions = [
     },
     {
       numb: "Q",
-      question: "Extension of c++ is?",
-      answer: ".cpp",
+      question: "AWS is Cloud Servies Provided By?",
+      answer: "Amazon",
       options: [
-        ".c++",
-        ".cpp",
-        ".c",
-        ".cp+"
+        "Google",
+        "Apple",
+        "Amazon",
+        "Microsoft"
       ]
     },
 ];
