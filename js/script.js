@@ -9,7 +9,11 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
+const names=document.getElementById('name');
+const email=document.getElementById('email');
+let contribute = document.getElementById('footer');
 
+contribute.style.display='none';
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -22,15 +26,25 @@ start_btn.onclick = ()=>{
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
 }
-
+    
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
+    let user_name=names.value;
+    let user_email=email.value; 
+    if (user_name !=""  && user_email!="")
+    {
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
     startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
+    }
+    else
+    {
+        info_box.style.display='block';
+    }
+    
 }
 
 let timeValue =  15;
@@ -44,26 +58,6 @@ let widthValue = 0;
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
-// // if restartQuiz button clicked
-// restart_quiz.onclick = ()=>{
-//     questions = questions.slice(0, 5)
-//     questions.sort(() => Math.random() - 0.5)
-//     quiz_box.classList.add("activeQuiz"); //show quiz box
-//     result_box.classList.remove("activeResult"); //hide result box
-//     timeValue = 15; 
-//     que_count = 0;
-//     que_numb = 1;
-//     userScore = 0;
-//     widthValue = 0;
-//     showQuetions(que_count); //calling showQestions function
-//     queCounter(que_numb); //passing que_numb value to queCounter
-//     clearInterval(counter); //clear counter
-//     clearInterval(counterLine); //clear counterLine
-//     startTimer(timeValue); //calling startTimer function
-//     startTimerLine(widthValue); //calling startTimerLine function
-//     timeText.textContent = "Time Left"; //change the text of timeText to Time Left
-//     next_btn.classList.remove("show"); //hide the next button
-// }
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
@@ -155,21 +149,22 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
+    let user_name=names.value;
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<p>Congrats 🎉' + user_name+' </p> <p> You got '+ userScore +' out of '+ questions.length +'</p>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
     else if(userScore > 1){ // if user scored more than 1
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<p>Nice Work😎 '+user_name+ '</p> <p> You got '+ userScore +' out of '+ questions.length +'</p>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<p>sorry 😐 '+user_name+ '</p> <p>You got only '+ userScore +' out of '+ questions.length +'</p>';
         scoreText.innerHTML = scoreTag;
     }
-    foot=document.getElementById('foot')
-    foot.innerText="Designed By Gravish, Harshit and Praveen 😎"
+    contribute.style.display='block';
+    contribute.innerText="Designed By Gravish, Harshit and Praveen 😎"
 }
 
 function startTimer(time){
