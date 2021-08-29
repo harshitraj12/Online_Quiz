@@ -102,7 +102,7 @@ let questions = [
     },
     {
       numb: "Q",
-      question: "AWS is Cloud Servies Provided By?",
+      question: "AWS is Cloud Services Provided By?",
       answer: "Amazon",
       options: [
         "Google",
