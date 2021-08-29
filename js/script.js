@@ -33,18 +33,36 @@ continue_btn.onclick = ()=>{
     let user_email=email.value; 
     if (user_name !=""  && user_email!="")
     {
-    info_box.classList.remove("activeInfo"); //hide info box
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    showQuetions(0); //calling showQestions function
-    queCounter(1); //passing 1 parameter to queCounter
-    startTimer(15); //calling startTimer function
-    startTimerLine(0); //calling startTimerLine function
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(user_email))
+        {
+            info_box.classList.remove("activeInfo"); //hide info box
+            quiz_box.classList.add("activeQuiz"); //show quiz box
+            showQuetions(0); //calling showQestions function
+            queCounter(1); //passing 1 parameter to queCounter
+            startTimer(15); //calling startTimer function
+            startTimerLine(0); //calling startTimerLine function
+        }
+        else
+        {
+            alert("You have entered an invalid email address!")
+            return (false)
+        }
     }
-    else
+    else if(user_name ==""  && user_email=="")
     {
         info_box.style.display='block';
+        alert("You have not provided both Name and Email ID");
     }
-    
+    else if(user_name=="")
+    {
+        info_box.style.display='block';
+        alert("You have not Provided Name")
+    }
+    else if(user_email=="")
+    {
+        info_box.style.display='block';
+        alert("You have not Provided Email")
+    }
 }
 
 let timeValue =  15;
@@ -167,7 +185,7 @@ function showResult(){
         fail=0;
     }
     contribute.style.display='block';
-    contribute.innerText="Designed By Gravish, Harshit and Praveen 😎"
+    contribute.innerText="Designed By:-  Gravish, Harshit and Praveen 😎"
     function sendmail(){
         console.log("Hello")
         var name = user_name;
@@ -205,7 +223,6 @@ function showResult(){
         );
     }
     sendmail()
-
 }
 
 function startTimer(time){
@@ -224,8 +241,6 @@ function startTimer(time){
             let correcAns = questions[que_count].answer; //getting correct answer from array
             for(i=0; i < allOptions; i++){
                 if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
-                    option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-                    option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
                     console.log("Time Off: Auto selected correct answer.");
                 }
             }
