@@ -65,7 +65,7 @@ input
 
 input:focus{
 
-    border: 1px solid transparent;
+    outline: none;
 }
 .start_btn button{
     font-size: 23px;
