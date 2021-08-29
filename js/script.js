@@ -148,21 +148,64 @@ function showResult(){
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
     let user_name=names.value;
+    let user_email=email.value;
+    let fail=0;
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<p>Congrats 🎉' + user_name+' </p> <p> You got '+ userScore +' out of '+ questions.length +'</p>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
+        fail=1;
     }
     else if(userScore > 1){ // if user scored more than 1
         let scoreTag = '<p>Nice Work😎 '+user_name+ '</p> <p> You got '+ userScore +' out of '+ questions.length +'</p>';
         scoreText.innerHTML = scoreTag;
+        fail=1;
     }
     else{ // if user scored less than 1
         let scoreTag = '<p>sorry 😐 '+user_name+ '</p> <p>You got only '+ userScore +' out of '+ questions.length +'</p>';
         scoreText.innerHTML = scoreTag;
+        fail=0;
     }
     contribute.style.display='block';
     contribute.innerText="Designed By Gravish, Harshit and Praveen 😎"
+    function sendmail(){
+        console.log("Hello")
+        var name = user_name;
+        var message = "Hey <span style = 'font-weight:bold'>"+name+"</span> ,You have got <span style = 'font-weight:bold'>"+userScore+" </span> out of <span style = 'font-weight:bold'>"+ questions.length+'</span>';
+        if (fail==1)
+        {
+            var subject = "<span>Result Announced -- </span><span style = 'font-weight:bold'>PASS</span>";
+        }
+        else
+        {
+            var subject = "<span>Result Announced -- </span><span style = 'font-weight:bold'>FAIL</span>";
+        }
+
+        var Body=subject+'<br>'+message;
+        //console.log(name, phone, email, message); 
+
+        Email.send({
+            SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+            To: user_email,
+            From: "onlyfortesting03@gmail.com",
+            Subject: "Result Declared",
+            Body: Body
+        }).then(
+            message =>{
+                //console.log (message);
+                if(message=='OK'){
+                alert('Your mail has been send. Thank you for giving Test.');
+                }
+                else{
+                    console.error (message);
+                    alert('There is error at sending mail. ')
+                    
+                }
+            }
+        );
+    }
+    sendmail()
+
 }
 
 function startTimer(time){
