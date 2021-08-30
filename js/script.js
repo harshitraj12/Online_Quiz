@@ -242,8 +242,7 @@ function startTimer(time){
             timeCount.textContent = "0" + addZero; //add a 0 before time value
         }
         if(time < 0){ //if timer is less than 0
-            if(que_count < questions.length - 1)
-            { //if question count is less than total question length
+            if(que_count < questions.length - 1){ //if question count is less than total question length
                 que_count++; //increment the que_count value
                 que_numb++; //increment the que_numb value
                 showQuetions(que_count); //calling showQestions function
@@ -254,9 +253,7 @@ function startTimer(time){
                 startTimerLine(widthValue); //calling startTimerLine function
                 timeText.textContent = "Time Left"; //change the timeText to Time Left
                 next_btn.classList.remove("show"); //hide the next button
-            }
-            else
-            {
+            }else{
                 clearInterval(counter); //clear counter
                 clearInterval(counterLine); //clear counterLine
                 showResult(); //calling showResult function
