@@ -535,12 +535,13 @@ footer button.show{
     }    
     .details
     {
-        left:13em;
+        /* left:13em; */
+        left:50vw;
     }
     input
     {
         width:85vw;
-        left: 8em;
+        left: 6em;
     } 
     /* .start_btn
     {
@@ -555,13 +556,16 @@ footer button.show{
     .info_box
     {
         width:90vw;    
-        left:12em;
+        /* left:12em; */
+        left:50vw;
 
     }
     .quiz_box
     {
         width:95vw;    
-        left:12em;
+        /* left:12em; */
+        left:50vw;
+
 
         /* /* height:max-content; */
     }
@@ -576,14 +580,15 @@ footer button.show{
     .result_box
     {
         width:90vw;    
-        left:12em;
-
+        left:50vw;
+        /* align-items: center; */
+        /* margin: auto auto; */
         /* height: 80vh; */
     }
     #footer
     {
-        width: 80%;
-        /* position: absolute; */
+        width: 100vw;
+        position: fixed;
         /* margin: -20px;
         bottom: -20vw; */
         /* left: 20px; */
