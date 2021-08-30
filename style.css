@@ -468,3 +468,111 @@ footer button.show{
     height: 100%;
     background: linear-gradient(to right, rgb(0, 42, 255), rgb(0, 255, 238));;
 }
+
+@media only screen and (max-width:350px)
+{
+    body
+    {
+        overflow-x: hidden;
+
+    }    
+    input
+    {
+        width:85vw;
+        left: 10em;
+    }
+    .start_btn
+    {
+        width: 100vw;
+    }
+    #particles-js
+    {
+        height: 110vh;
+        width: max-content;
+    }
+    .info_box
+    {
+        width:90vw;    
+        margin-top: 20px;
+    }
+    .quiz_box
+    {
+        width:98vw;    
+        margin-top: 20px;
+        /* height:max-content; */
+    }
+    .quiz_box .timer
+    {
+        margin: 10px;
+    }
+    .quiz_box .next_btn
+    {
+        margin:1px;
+    }
+    .result_box
+    {
+        width:90vw;    
+        /* height: 80vh; */
+    }
+    #footer
+    {
+        width: 100%;
+        position: absolute;
+        margin: -20px;
+        bottom: -20vw;
+        left: 20px;
+    }
+}
+@media only screen and (min-width:350px) and (max-width:550px)
+{
+    body
+    {
+        overflow-x: hidden;
+    }    
+    input
+    {
+        width:85vw;
+        left: 8em;
+    }
+    .start_btn
+    {
+        width: 100vw;
+    }
+    #particles-js
+    {
+        height: 110vh;
+        width: max-content;
+    }
+    .info_box
+    {
+        width:90vw;    
+        margin-top: 20px;
+    }
+    .quiz_box
+    {
+        width:95vw;    
+        margin-top: 20px;
+        /* height:max-content; */
+    }
+    .quiz_box .timer
+    {
+        margin: 10px;
+    }
+    .quiz_box .next_btn
+    {
+        margin:1px;
+    }
+    .result_box
+    {
+        width:90vw;    
+        /* height: 80vh; */
+    }
+    #footer
+    {
+        width: 100%;
+        position: absolute;
+        margin: -20px;
+        bottom: -20vw;
+        left: 20px;
+    }
+}
