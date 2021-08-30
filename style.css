@@ -535,7 +535,7 @@ footer button.show{
     {
         width:85vw;
         left: 8em;
-    }
+    } 
     .start_btn
     {
         width: 100vw;
@@ -555,7 +555,7 @@ footer button.show{
     {
         width:95vw;    
         margin-top: 20px;
-        /* height:max-content; */
+        /* /* height:max-content; */
     }
     .quiz_box .timer
     {
