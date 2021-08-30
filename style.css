@@ -537,6 +537,8 @@ footer button.show{
     {
         /* left:13em; */
         left:50vw;
+        top:45vh;
+
     }
     input
     {
@@ -558,6 +560,8 @@ footer button.show{
         width:90vw;    
         /* left:12em; */
         left:50vw;
+        top:45vh;
+
 
     }
     .quiz_box
@@ -565,6 +569,7 @@ footer button.show{
         width:95vw;    
         /* left:12em; */
         left:50vw;
+        top:45vh;
 
 
         /* /* height:max-content; */
@@ -581,6 +586,7 @@ footer button.show{
     {
         width:90vw;    
         left:50vw;
+        top:45vh;
         /* align-items: center; */
         /* margin: auto auto; */
         /* height: 80vh; */
