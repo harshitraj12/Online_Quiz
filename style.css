@@ -599,3 +599,81 @@ footer button.show{
         /* left: 20px; */
     }
 }
+@media only screen and (min-width:550px) and (max-width:900px)
+{
+    body
+    {
+        overflow-x: hidden;
+        /* overflow: hidden; */
+        /* position: fixed; */
+        /* width: 100%; */
+        /* scroll:'no'; */
+    }    
+    .details
+    {
+        /* left:13em; */
+        left:50vw;
+        top:50vh;
+
+    }
+    input
+    {
+        width:75vw;
+        left: 0.5vw;
+    } 
+    /* .start_btn
+    {
+        width: 100vw;
+        left: 2vw;
+    } */
+    #particles-js
+    {
+        height: 150vh;
+        width: 50em;
+        overflow-x: hidden;
+    }
+    .info_box
+    {
+        width:90vw;    
+        /* left:12em; */
+        left:50vw;
+        top:50vh;
+
+
+    }
+    .quiz_box
+    {
+        width:80vw;    
+        /* left:12em; */
+        left:23em;
+        top:70vh;
+        /* height: 70vw; */
+
+        /* /* height:max-content; */
+    }
+    .quiz_box .timer
+    {
+        margin: 10px;
+    }
+    .quiz_box .next_btn
+    {
+        margin:1px;
+    }
+    .result_box
+    {
+        width:50vw;    
+        left:24em;
+        top:55vh;
+        /* align-items: center; */
+        /* margin: auto auto; */
+        /* height: 90vh; */
+    }
+    #footer
+    {
+        width: 100%;
+        position: fixed;
+         /* margin: -20px; */
+        bottom: 0; 
+        /* left: 20px; */
+    }
+}
