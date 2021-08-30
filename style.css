@@ -528,6 +528,8 @@ footer button.show{
     body
     {
         overflow-x: hidden;
+        overflow: hidden;
+        width: 100%;
     }    
     input
     {
@@ -540,8 +542,9 @@ footer button.show{
     }
     #particles-js
     {
-        height: 110vh;
-        width: max-content;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
     }
     .info_box
     {
