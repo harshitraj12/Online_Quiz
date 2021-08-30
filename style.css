@@ -527,34 +527,44 @@ footer button.show{
 {
     body
     {
-        overflow-x: hidden;
+        overflow-y: hidden;
         overflow: hidden;
-        width: 100%;
+        position: fixed;
+        /* width: 100%; */
+        /* scroll:'no'; */
     }    
+    .details
+    {
+        left:13em;
+    }
     input
     {
         width:85vw;
         left: 8em;
     } 
-    .start_btn
+    /* .start_btn
     {
         width: 100vw;
-    }
+    } */
     #particles-js
     {
-        height: 100%;
-        width: 100%;
+        height: 150vh;
+        width: 30em;
         overflow-x: hidden;
     }
     .info_box
     {
         width:90vw;    
         margin-top: 20px;
+        left:12em;
+
     }
     .quiz_box
     {
         width:95vw;    
         margin-top: 20px;
+        left:12em;
+
         /* /* height:max-content; */
     }
     .quiz_box .timer
@@ -568,14 +578,16 @@ footer button.show{
     .result_box
     {
         width:90vw;    
+        left:12em;
+
         /* height: 80vh; */
     }
     #footer
     {
-        width: 100%;
-        position: absolute;
-        margin: -20px;
-        bottom: -20vw;
-        left: 20px;
+        width: 80%;
+        /* position: absolute; */
+        /* margin: -20px;
+        bottom: -20vw; */
+        /* left: 20px; */
     }
 }
